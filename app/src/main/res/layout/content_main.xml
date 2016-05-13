@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.intelliskye.www.earnd.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/accomplished"
+        android:background="@drawable/greenbutton"
+        android:clickable="true"
+        android:nestedScrollingEnabled="false"
+        android:onClick="greenButtonClicked"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/rewarded"
+        android:background="@drawable/redbutton"
+        android:nestedScrollingEnabled="false"
+        android:onClick="redButtonClicked"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/accomplished"
+        android:layout_marginBottom="112dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:text="0"
+        android:id="@+id/ratioText"
+        android:layout_marginTop="41dp"
+        android:clickable="false"
+        android:editable="true"
+        android:textAlignment="center"
+        android:textColor="#0063f9"
+        android:textSize="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:id="@+id/greenText"
+        android:layout_below="@+id/ratioText"
+        android:layout_alignParentStart="true"
+        android:editable="true"
+        android:textSize="50dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="false" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="0"
+        android:id="@+id/redText"
+        android:editable="true"
+        android:textSize="50dp"
+        android:layout_alignTop="@+id/greenText"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
